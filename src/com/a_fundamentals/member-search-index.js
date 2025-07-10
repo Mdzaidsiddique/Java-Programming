@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"com.a_fundamentals","c":"Comment","l":"add(int, int)","u":"add(int,int)"},{"p":"com.a_fundamentals","c":"Comment","l":"Comment()","u":"%3Cinit%3E()"},{"p":"com.a_fundamentals","c":"Comment","l":"main(String[])","u":"main(java.lang.String[])"}];updateSearchResults();
