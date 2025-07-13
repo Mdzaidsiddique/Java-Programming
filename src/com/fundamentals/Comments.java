@@ -1,6 +1,6 @@
-package com.a_fundamentals;
+package com.fundamentals;
 
-public class Comment {
+public class Comments {
     // convention to provide description about code/ implementation and for that we use comment section
 
     /*
@@ -36,3 +36,4 @@ public class Comment {
     }
 
 }
+
