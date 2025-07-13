@@ -16,6 +16,8 @@ public class Identifiers {
             - Class, Interface name: Service{}, Utility{}, Customer{}, Order{}, etc
      */
 
+    // Keywords in Java convey a special meaning to the compiler therefore, these cannot be used as identifiers.
+
     String name = "zaid alif siddique";
 
     /*
