@@ -1,0 +1,20 @@
+Statement: collection of expressions
+
+    1) General Purpose Statements:
+       - Declaring variables, methods, classes, etc.
+       - Creating objects, accessing variables, methods, etc.
+
+    2) Conditional Statements: executes block of instructions under perticular condition
+       - if, if-else, switch-case
+
+    3) Iterative Statements:
+       - for, while, do-while
+
+    4) Transfer statements:
+       - break, continue, return
+
+    5) Exception Handling statements:
+       - try-catch-finally, throw, throws
+
+    6) Synchronised statements:
+       - synchronised method, synchronised blocks
