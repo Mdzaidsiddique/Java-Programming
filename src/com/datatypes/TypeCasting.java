@@ -6,7 +6,7 @@ public class TypeCasting {
 
      - there are two types of primitive data type casting:
 
-     1) implicit type casting: process to convert lower data types to higher data types
+     1) implicit type casting (widening): process to convert lower data types to higher data types
  */
 
     public static void implicitTypeCasting() {
@@ -36,7 +36,7 @@ public class TypeCasting {
     }
 
 /*
-    2) explicit type casting: the process of converting higher data types to lower data types
+    2) explicit type casting (narrowing): the process of converting higher data types to lower data types
       - to perform explicit type casting we have to use the following pattern
 
         P a = (Q) b;  where, (Q)-> cast operator
