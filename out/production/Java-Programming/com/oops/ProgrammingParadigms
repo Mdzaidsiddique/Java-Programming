@@ -1,0 +1,13 @@
+paradigm: way of writing code (style)
+        - to develop a computer application, we have various programming paradigms (procedural, functional, Object-oriented, etc)
+
+java support multiple paradigms:
+        - object oriented (core paradigm of java)
+        - functional (since Java 8:	lambda, streams, functional interfaces)
+        - concurrent (multi-threading, synchronization, parallel streams)
+        - imperative (statements, loops, conditions)
+        - structured (sequence, selection (if-else), iteration (loops))
+
+Oops & functional are two most popular programming paradigms
+
+
