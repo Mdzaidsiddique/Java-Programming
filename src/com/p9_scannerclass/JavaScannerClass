@@ -1,0 +1,24 @@
+- scanner class belong to java.util
+- to read inputs from different sources like (input stream, users, files, etc
+
+Scanner sc = new Scanner(System.in)
+- system.in -> used to take input from standard input (just like taking input from keyboard)
+
+Java Scanner Methods to Take Input:
+
+the scanner class provides various methods that allow us to read inputs of different types:
+    - next(): reads a word from the user
+    - nextLine(): reads a whole line
+    - nextInt(): reads an int value from the user
+    - nextFloat(): reads a float value form the user
+    - nextBoolean(): reads a boolean value from the user
+    - nextByte(): reads a byte value from the user
+    - nextDouble(): reads a double value from the user
+    - nextShort(): reads a short value from the user
+    - nextLong(): reads a long value from the user
+
+Difference between next() & nextLine():
+    - next() : reads inputs up to the whitespaces (exclude whitespaces), it terminates when encounter whitespaces
+    - nextLine() : reads the entire line including whitespaces & terminates when encounter next line char '\n'
+
+sc.close(): always close scanner (good practice)

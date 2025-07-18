@@ -1,0 +1,38 @@
+- in object oriented programming everything is based on the concept called object
+- these objects are the basic units going to contain some data called (state)
+- and operations on these data called methods or (behaviour)
+
+benefits:
+    - reduce complexity
+    - easier maintenance
+    - code reusability
+    - faster development
+
+class & object:
+    - class is a template or blueprint of an object, whereas object is a instance of a class
+    - class is the virtual encapsulation of properties & behaviour
+    - object is physical encapsulation of properties & behaviour
+    - the main purpose of a class is to represent all real world entities in java application
+
+    Class{
+
+        - variables (properties) -- (data/ state)
+        - methods (behaviour)
+
+    }
+
+instance variable: inside the class & outside the methods
+local variable: inside the methods
+
+Note: Inside a class, there will be two types of elements are there:
+      1. static elements
+      2. non-static elements(instance variables and methods)
+
+
+All the static elements will be loaded into RAM first, and all the non-static elements will be there
+inside the hard disk in the form of byte code in the .class file.
+
+now JVM searches for the main
+method and control start the execution of a Java program from the first line of the main method.
+
+The Complete signature of the main method is :
