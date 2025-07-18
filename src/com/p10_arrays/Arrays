@@ -1,0 +1,10 @@
+array: used to store multiple values in a single variable
+
+- array is ordered, indexed
+- size: arr.lengh (static variable), must be specified by int or short not long
+
+Note: In Java array is a special type of object whose class is non-existence.
+      whenever JVM encounters [], it will create an array object in the memory.
+
+int [] arr = new int[10]
+int [] arr = {1,2,3,4,5}

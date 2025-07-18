@@ -1,0 +1,27 @@
+- string is a sequence of characters surrounded by ""
+- predefined class in java.lang package
+
+- syntax: String message = "hello world"
+  here, message is the variable, which is initialized with string object
+      - "hello world" is not a primitive type
+      - this message variable is a reference variable of type string class
+
+In Java, the JVM maintain has a string pool to store all of its strings inside the memory
+- string pool: helps re-using the string
+
+String s1 = "Welcome"; // string literals
+String s2 = "Welcome";
+
+Here, we are directly providing the value “Welcome”. Hence, the compiler first checks the string pool
+      to see if this string already exists.
+      - If this string already exists: the new string is not created and the reference point of already existing
+       "welcome" is provided
+      - If string doesn't exist: the new string "Welcome" is created inside this string pool area.
+
+i.e: s1 == s2 (output: true)
+
+String s3 = new String("Welcome");
+- Here the value of the string is not directly provided, hence a new “Welcome” string is created inside the
+- heap memory even though the “Welcome” string object is already present inside the string pool area.
+
+s1 == s3 (output: false)
