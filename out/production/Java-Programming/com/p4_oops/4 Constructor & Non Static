@@ -1,0 +1,10 @@
+Difference between non static and constructor:
+- method name can be anything but constructor name must be same as class name
+- method must have return type at-least void, but constructor shouldn't have any return type
+- a method can be called anytime, but constructor will be called at the time of object creation only
+- method can be static, final & abstract but constructor can't be static, final & abstract
+
+similarities between non static and constructor:
+- constructor can be overloaded similar to method overloading
+
+

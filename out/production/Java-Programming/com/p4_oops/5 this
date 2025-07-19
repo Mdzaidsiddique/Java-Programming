@@ -1,0 +1,6 @@
+
+- this keyword cannot use inside static area (compilation error)
+
+- this points to current class object
+- this differentiate between local and instance variable
+- calls constructor of a class from another constructor of the same class

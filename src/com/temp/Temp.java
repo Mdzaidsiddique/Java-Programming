@@ -3,12 +3,18 @@ package com.temp;
 public class Temp {
 
     public static void main(String[] args){
+
+        int a = 9;
+        int b = a%10;
+        int c = (a-b)/10;
+        System.out.println(c + " "+ a);
+
         System.out.println("hello world!");
 
         String greet = sayHi("zaid");
         System.out.println(greet);
 
-        addTowNumbers(10, 15);
+//        addTowNumbers(10, 15);
     }
 
     public static String sayHi(String name){
