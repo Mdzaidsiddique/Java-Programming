@@ -1,0 +1,7 @@
+- in java multiple class can collaborate to provide services
+- all the class should be on same path
+
+- We can define a class as an instance member inside another class also,
+  by this we establish ‘Has-A' relationship between 2 objects.
+
+- we can define a class inside a class as a static member also

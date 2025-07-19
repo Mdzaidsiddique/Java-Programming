@@ -1,0 +1,20 @@
+- It is a special type of non-static method, which will be executed automatically only at the time of creating an object
+
+- For object creation, constructor execution must be there
+- until & unless constructor gets executed properly, object will be in creation process
+- the main utilization of constructors is to provide initializations for the instance variable
+
+- we can have a dot java file of a class, without a constructor, but we can't have a dot class file without a constructor
+  - At least default constructor must be there inside the dot class file of a class
+  - if (inside a class) we keep any constructor - that will executes at compilation time
+  - else java compiler provides default constructor to the dot class file
+
+  - Default constructor given by the compiler will always be public and zero argument (public Demo(){})
+
+- This default constructor given by the java compiler seems like an empty constructor
+- but strictly speaking there is a hidden statement 'super()' is there as a first line of this default constructor
+- super() is a call to the parent class constructor
+
+- if we want to execute certain logics at the time of creating an object of a class then we should place those
+  logics inside the constructor of that class.
+
