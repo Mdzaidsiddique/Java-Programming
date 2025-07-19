@@ -1,1 +1,19 @@
-Methods:
+Methods: (set of instructions) used to perform certain actions, also known as functions
+    - a block of codes that only runs when it called
+    - we can pass data known as parameter
+    - method can return some value or print
+    - define methods to re-use code multiple times
+    - return type is must at-least void
+
+Types of methods:
+    1) concrete method: both method declaration and implementation, at least empty body.
+    2) abstract method: only method declaration, abstract keyword is must
+
+Methods with parameter:
+    - parameters to supply input data to perform action (all primitive & user defined are allowed)
+
+Methods with class as parameter:
+    - if we take any class as parameter, then to call that method we have 3 possible values
+    - 1) same class object
+    - 2) child class object
+    - 3) null (method will be called but when control reach to inside method -> NullPointerException (Not recommended)
