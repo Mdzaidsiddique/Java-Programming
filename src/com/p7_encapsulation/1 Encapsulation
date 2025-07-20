@@ -1,0 +1,19 @@
+What is encapsulation:
+- one of four pillars of oop
+- encapsulation means wrapping data (variables) & methods into single unit (class)
+- and restricting direct access to some of other object's components
+
+Why to use:
+- to hide internal details of an object
+- to protect data from outside interfaces (unauthorized access)
+- to follow data security & integrity
+
+How to achieve encapsulation:
+- declare variables as private
+- provide public getter & setter methods to access/modify them
+
+Key benefits:
+- improve security
+- better control over data
+- easy to update/maintain
+- reusability & clear code structure
