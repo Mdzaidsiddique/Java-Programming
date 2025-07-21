@@ -1,0 +1,20 @@
+Inheritance: is-a relationship: extends keyword:
+- Parent-child relationship between classes
+- it bring variables & methods from parent/base/super class to child/sub/derived class
+- in order to re-use
+
+- the idea behind inheritance is to create new class that are build upon existing classes
+- can user methods, variables of parent class into its child class
+- can add new methods
+
+Types of inheritance in java:
+    - single (class, interface)
+    - multi-level (class, interface)
+    - hierarchical (class, interface)
+    - multiple (interface)
+    - hybrid (interface)
+
+why multiple & hybrid is not supported in java class level?
+    - because of diamond problem
+    - if 2 classes inherited by a class and both classes having same method, then ambiguity problem
+    - compile time error is better than run time error
