@@ -2,6 +2,8 @@ Method Overriding:
     - child class object can access the methods of its parent class
     - child class can re-implement the methods of parent class known as method overriding
     - we cannot override static methods
+    - any final methods can not be override in child class
+
 Uses:
     - used to provide specific implementation to methods provided by super class
     - method overriding is used for run time polymorphism
