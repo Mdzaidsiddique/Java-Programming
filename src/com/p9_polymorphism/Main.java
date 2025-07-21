@@ -13,6 +13,6 @@ public class Main {
 
         // downcasting
         Dog d = (Dog) dogAnimal;
-        d.sound();        // Now we can call Dog-specific methods
+        d.sound(); // Now we can call Dog-specific methods
     }
 }

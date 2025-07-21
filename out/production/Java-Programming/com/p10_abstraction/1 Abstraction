@@ -1,0 +1,24 @@
+Abstraction:
+- it is the process of hiding implementation and showing only functionality to the user
+- it lets you focus on what the object does, instead of how it does
+
+There are 2 ways to achieve abstraction:
+
+1) Abstract Class (0-100%)
+2) Interface (100%), since java 8, we have default methods
+
+Abstract Class:
+    - a class declare with abstract keyword
+    - it need to be extended & its method implemented
+    - it can not be instantiated (can not create object)
+    - it can have abstract and non abstract methods
+    - it can have constructor, static and main methods also
+    - oit can have final methods, that will force subclass not to change the body of the method
+
+Abstract Method:
+    - don't have body, only method signature (no implementation)
+    - achieve by abstract modifier
+    - sub class must override and provide definition to abstract methods
+    - if method is abstract, thee class must be abstract
+
+- abstract can not be final, static & private
