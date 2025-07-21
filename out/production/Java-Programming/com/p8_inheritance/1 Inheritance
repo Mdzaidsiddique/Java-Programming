@@ -18,3 +18,5 @@ why multiple & hybrid is not supported in java class level?
     - because of diamond problem
     - if 2 classes inherited by a class and both classes having same method, then ambiguity problem
     - compile time error is better than run time error
+
+- final class can not be extended (i.e, final class doesn't have child class)

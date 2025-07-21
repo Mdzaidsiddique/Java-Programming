@@ -1,0 +1,27 @@
+- polymorphism means many form
+
+- the ability of an object to take many form (usually by method overloading & overriding)
+
+Types of polymorphism:
+1) run time polymorphism (static bonding/ method overloading):
+    - When a subclass overrides a method of the parent class, and the method call is resolved at runtime
+
+2) compile time polymorphism (method overriding):
+    - Multiple methods with the same name but different parameters in the same class
+    - add(int x, int y); add(double a, double b)
+    - The method that gets called is decided at compile time based on the parameters
+
+- object up-casting:
+    - reference variable of parent class hold the object of child class
+    - ex1: Animal a1 = new Cat(); a.speak(); // meow meow... (method overloading)
+    - ex2: Animal a2 = new Dog(); a2.speak(); // barking...  (method overloading)
+
+- object down-casting:
+    - it is the opposite of upcasting
+    - down casting is the process of converting a reference of a parent class (superclass) to a child class (subclass)
+
+Why Use Polymorphism?
+✅ Increases code reusability
+✅ Supports method flexibility
+✅ Promotes loose coupling
+✅ Enables clean architecture (via interface-based design)
