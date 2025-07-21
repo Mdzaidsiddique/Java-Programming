@@ -1,0 +1,11 @@
+Java Bean Class POJO (Plain Old Java Object):
+- reusable, purely encapsulated java class
+
+Rules:
+- class must be public
+- all fields should be private
+- should have zero args constructor
+- getter & setter methods for each field
+- may have parameterized constructor
+
+- there are two ways to provide values (constructor and setter)
