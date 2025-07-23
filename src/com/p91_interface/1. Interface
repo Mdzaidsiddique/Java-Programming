@@ -1,0 +1,27 @@
+- interface in java is a collection of abstract methods
+- interface is used to achieve 100% abstraction
+- since java 8, we can define static & default methods in interface
+- both abstract class & interface can't be instantiated
+
+default methods:
+- default methods have the default implementation, but didn't affect the intention behind interface
+
+static method:
+- statics method can be called independently without object
+- can be called with the help of interface name
+
+difference between abstract class & interface:
+
+abstract class: (0-100%) partial abstraction
+    - can have abstract and non-abstract methods
+    - support final, non-final, static, non-static variables
+    - can provide implementation of an interface
+
+interface: (100% abstraction)
+    - interface can only have abstract methods (since java 8, default & static)
+    - supports only static & final variables
+    - support multiple inheritance
+
+
+
+

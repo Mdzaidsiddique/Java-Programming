@@ -1,0 +1,13 @@
+Interface in java can also be marker or tagged interface
+- it provides essential information to the JVM for useful operation
+
+Early (static) Binding:
+- when type of an object determine at compile time
+
+Late (dynamic) Binding:
+- when type of an object determine at run time
+
+default method:
+
+static method:
+
