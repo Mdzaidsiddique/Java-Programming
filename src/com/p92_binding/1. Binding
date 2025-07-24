@@ -1,0 +1,13 @@
+binding: connecting a method call to the method body is known as binding
+
+Early (static) Binding:
+- when type of an object determine at compile time (by compiler)
+- happens with method overloading, private, static & final method
+- compiler knows which method to call
+- less flexible
+
+Late (dynamic) Binding:
+- when type of an object determine at run time
+- happens with method overriding
+- more flexible
+
