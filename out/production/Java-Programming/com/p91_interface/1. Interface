@@ -5,10 +5,11 @@
 
 default methods:
 - default methods have the default implementation, but didn't affect the intention behind interface
+- need not to override inside implementation class
 
 static method:
 - statics method can be called independently without object
-- can be called with the help of interface name
+- static methods are not inherited, it can be called with the help of interface name
 
 difference between abstract class & interface:
 
@@ -21,6 +22,10 @@ interface: (100% abstraction)
     - interface can only have abstract methods (since java 8, default & static)
     - supports only static & final variables
     - support multiple inheritance
+    - interface enables late binding (run time polymorphism- method overriding)
+
+Marker/Tagged interface:
+    -
 
 
 

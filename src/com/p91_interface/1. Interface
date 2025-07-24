@@ -5,10 +5,11 @@
 
 default methods:
 - default methods have the default implementation, but didn't affect the intention behind interface
+- need not to override inside implementation class
 
 static method:
 - statics method can be called independently without object
-- can be called with the help of interface name
+- static methods are not inherited, it can be called with the help of interface name
 
 difference between abstract class & interface:
 
@@ -21,7 +22,23 @@ interface: (100% abstraction)
     - interface can only have abstract methods (since java 8, default & static)
     - supports only static & final variables
     - support multiple inheritance
+    - interface enables late binding (run time polymorphism- method overriding)
+
+Marker/Tagged interface:
+    - an interface that has no member
+    - ex, Serializable, Cloneable, Remote, etc
+    - they are used to provide some essential information to JVM to perform useful operations
 
 
+which should use? abstract class or interface?
+✅ Use an interface when:
+    - You want to define a contract that multiple unrelated classes can implement
+    - You want to achieve full abstraction (no method implementation)
+    - You want to support multiple inheritance (Java allows multiple interfaces but only one class to extend)
+    - You are building plug-and-play behavior (like Comparable, Runnable, etc.)
 
-
+✅ Use an abstract class when:
+    - You want to share common code (method implementation) among related classes
+    - You want to define state (fields/variables) along with behavior
+    - You may need constructors, non-static initialization blocks, or protected members
+    - You expect classes to be closely related (e.g., Vehicle, Car, Truck)
