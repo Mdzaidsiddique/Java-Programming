@@ -25,8 +25,20 @@ interface: (100% abstraction)
     - interface enables late binding (run time polymorphism- method overriding)
 
 Marker/Tagged interface:
-    -
+    - an interface that has no member
+    - ex, Serializable, Cloneable, Remote, etc
+    - they are used to provide some essential information to JVM to perform useful operations
 
 
+which should use? abstract class or interface?
+✅ Use an interface when:
+    - You want to define a contract that multiple unrelated classes can implement
+    - You want to achieve full abstraction (no method implementation)
+    - You want to support multiple inheritance (Java allows multiple interfaces but only one class to extend)
+    - You are building plug-and-play behavior (like Comparable, Runnable, etc.)
 
-
+✅ Use an abstract class when:
+    - You want to share common code (method implementation) among related classes
+    - You want to define state (fields/variables) along with behavior
+    - You may need constructors, non-static initialization blocks, or protected members
+    - You expect classes to be closely related (e.g., Vehicle, Car, Truck)

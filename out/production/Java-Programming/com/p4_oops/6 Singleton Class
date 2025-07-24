@@ -1,0 +1,3 @@
+- a class that allow only one instantiation throughout the app life cycle
+- private constructor (prevents instantiation)
+- public, static method - provide access to the instance
