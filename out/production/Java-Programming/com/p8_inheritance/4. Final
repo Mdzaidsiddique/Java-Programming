@@ -1,0 +1,10 @@
+ - final keyword in Java is used to restrict the user, it can be used in many contexts
+
+ - final can be:
+    1. variable
+    2. method
+    3. class
+- If you make any variable final, you cannot change the value of a final variable (It will be constant).
+- In Java, the final variable must be initialized before we use it, either at the time of declaration or inside the constructor of the class.
+- If you make any method final, you cannot override it inside the child class.
+- If you make any class as final, you cannot extend it. final class does not have a child class.
