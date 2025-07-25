@@ -1,0 +1,13 @@
+Exception:
+- exception is an unwanted or unexpected event, which occurs during the execution of a program
+- at run time it disturb the normal flow of the program’s instructions
+- technically it is an object of some classes that will be created by JVM at run time (due to logical error)
+
+
+Exception Handling:
+- EH in java is one of the powerful mechanism to handle the runtime error to maintain normal flow of execution
+- the core advantage of exception handling is to maintain the normal flow of the programme
+
+Error vs Exception:
+
+
