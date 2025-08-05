@@ -1,0 +1,17 @@
+Enums & Inheritance:
+
+- All Enum implicitly extends Enums class (from java.lang package)
+- as, a class can only extends one parent in java so, enum can't extends anything else
+- toString() method is overridden in Enum class, which returns enum constant name
+- enum can implements many interface
+
+values() & ordinal() method: (both presents in java.lang.Enum class)
+- values(): returns arrays of constants
+- ordinal(): return index
+
+We can have constructors, methods and fields inside enums type, which make them very powerful
+
+Constructor in Enum:
+- Enum can contain constructor, it will executed separately for each enum constant (RED, BLUE) when enum class loading
+- we can't create object of enum explicitly, hence we can't invoke the enum constructor directly.
+- constructor of enum is private, if u don't declare compiler internally declare private constructor.

@@ -1,0 +1,19 @@
+Enum in java is a data type that contains a fixed set of constants. (Convention- Capital laters)
+It can be used for:
+    - Days: SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY,  SATURDAY
+    - Months: JAN, FEB, MARCH, APR, MAY, etc.
+    - Season: SPRING, SUMMER, WINTER, AUTUMN
+    - Directions: NORTH, SOUTH, EAST, WEST
+    - Colors: RED, GREEN, BLUE, YELLOW, etc.
+
+- Enums can not be declared inside a methods (it can be outside or inside class)
+- Enums can have main methods inside it as well
+
+Every enum internally implemented by class, and every enum type represents an object of type Enum.
+- for example, if we have enums like this:
+    enum Color{ RED, BLUE }
+- it internally converted as:
+    final class color extends enum{
+        public static final Color RED = new Color();
+        public static final Color BLUE = new Color():
+    }
