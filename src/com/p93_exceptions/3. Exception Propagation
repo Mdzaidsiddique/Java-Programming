@@ -1,0 +1,18 @@
+Exception Propagation:
+- An exception is first thrown from the top of the stack,
+- if not caught, it drop down the call stack tot he previous method
+- if not caught there, the exception again dropdown to the previous method
+- and so on until they are caught or reach to the very bottom of the callstack
+this is called exception propagation.
+
+fun1(){ exception }
+fun2(){ fun1() }
+fun3(){ try-catch- fun2() }
+main(){ fun3() }
+
+    |____fun1()____|---> exception occurred
+    |____fun2()____|
+    |____fun3()____|
+    |____main()____|
+
+       call stack

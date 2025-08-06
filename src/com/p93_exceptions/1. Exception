@@ -3,11 +3,49 @@ Exception:
 - at run time it disturb the normal flow of the program’s instructions
 - technically it is an object of some classes that will be created by JVM at run time (due to logical error)
 
+- if exception occur at runtime, program will be terminated abnormally in the middle
+- to avoid abnormal termination we use exception handling concept (try-catch)
 
 Exception Handling:
 - EH in java is one of the powerful mechanism to handle the runtime error to maintain normal flow of execution
 - the core advantage of exception handling is to maintain the normal flow of the programme
 
 Error vs Exception:
+- Error: A serious problem that can't be recoverable, a reasonable application shouldn't try to catch errors
+- Exception: Something went wrong during programme but can be recoverable, reasonable app might try to catch
 
+Types of Exception:
+1) Checked Exception (Compile Time Exception):
+    - Checked at compile time by compiler
+    - Java Compiler force you to handle by try-catch or throws kw in method signature
+    - if not handled properly, code will not compile
+    - Directly inherit Throwable class except Runtime Exception
+    - For example: IOException, SQLException, etc
+
+2) Unchecked Exception (Run Time Exception):
+    - Checked at run time by JVM (not mandatory to handle at compile time)
+    - the class that inherit RuntimeException
+    - For example: NullPointerException, ArithmeticException, ArrayIndexOutOfBoundsException, IllegalArgumentException, etc
+3) Error: mainly 2 types of exceptions (checked & unchecked), error are also considered as unchecked exception
+
+note: RuntimeException class is super class of all the unchecked exception, so we can create a custom unchecked
+      exception by extending a RuntimeException class
+
+      public class MyException extends RuntimeException{
+
+        public MyException(String errorMessage){
+            super(errorMessage);
+        }
+
+      }
+
+Use Checked Exceptions when:
+    - the error is expected and recoverable (try again, ask for different input)
+    - example: reading file, accessing db, network issues, invalid user input that can be correct
+    * Rule of thumb: if the problem is external & may happen under normal conditions- use checked exception
+
+Use Unchecked Exceptions when:
+    - the error is due to programming mistakes (bugs) or unexpected internal issues, not recoverable
+    - example: null pointer, number divided by zero, etc
+    * Rule of thumb: if error is due to programming logic issues or indicates a bug, use unchecked exception
 
