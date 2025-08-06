@@ -1,0 +1,22 @@
+Method overriding rules with exception and Custom Exception:
+
+1) if super class method exception doesn't declare with throws clause:
+    - in this case sub class overridden method cannot declare checked exception but can unchecked exception
+
+2) if the super class exception declare exception with throws clause:
+    - in this case sub class can declare same exception or no exception
+    - but subclass overridden method can't declare parent class exception of declared exception
+
+*User defined CustomException in java:
+    - java provides almost all the exception that may occur, however we can create our own exception as well
+    - if user defined exception class extends java.lang.Exception class then it will become checked exception
+    - if extends java.lang.RuntimeException class then it becomes un-checked exception
+
+syntax:
+    public class MyCustomException extends Exception/RuntimeException{
+
+        // constructor
+        public MyCustomException(String message){
+            super(message);
+        }
+    }

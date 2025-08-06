@@ -1,0 +1,60 @@
+Java Exception Keyword:
+    - Java provides 5 kw to handle exception (try, catch, finally, throw, throws)
+    - these keywords can't use outside methods
+    - can be used inside (a constructor, a static block, a method)
+    - throws used outside methods but with method signature only
+
+1) try: try is used to specify a block where we write a exception code
+      - try can't be used alone, try must be followed by catch or finally
+
+2) catch: catch block used to handle the exception by declaring the type of exception within parameter
+        - exp: try{}catch(Exception e){}
+        - catch also can't be used alone, it must be preceded by try block & can be followed by finally block
+
+3) finally: finally block is used to execute the necessary code of the program
+          - it is executed weather exception is handled or not
+          - finally is useful for cleanup code: closing files, releasing memory, etc.
+          - for each try block only one finally block should be there
+
+4) throw: it is used to throw an exception explicitly, we can throw checked or unchecked exception
+         - it mostly used to throw a custom exception
+         - syntax: throw new ExceptionClass("error message");
+
+5) throws: it is used to declare exceptions, it specify there may exception occur in the method
+         - throws doesn't throw exception, it always used with method signature
+
+Note:
+    - if exception occur in try block then rest of the code won't execute, so do not keep exception free code
+      inside try block (recommendation)
+
+Default Exception Handler:
+    - The JVM check whether the exception is handles or not, if not handled,
+    - then JVM called default exception handler
+    - that prints 'Error message + stack trace (hierarchy of methods where exception occurred)'
+            Exception in thread "main" java.lang.ArithmeticException: / by zero
+            	at UnhandledExceptionExample.main(UnhandledExceptionExample.java:5)
+    - and then abnormally terminate the program
+
+
+Multi catch block:
+    - a try block can be followed by one or more catch block
+    - each block must contain different exception handler
+    - all catch block must be in ordered (child, parent, grand parent) i.e: Arithmetic must come before Exception
+    - siblings exception class can be in any order but parent class must be at last
+    - so if you have to perform different tasks at the occurrence of various exceptions, use multi-catch block
+
+Nested try block:
+    - In Java, a nested try block means having a try block inside another try block
+    - It's useful when you want to handle different exceptions separately in different scopes
+    - For example, the inner try block can be used to handle ArrayIndexOutOfBoundsException
+      while the outer try block can handle the ArithmeticException (division by zero)
+
+scenarios when finally block will not execute:
+    1) JVM termination: System.exit(0); (0)-> normal termination, (1)-> abnormal termination, (>0)-> different types of error
+    2) Machine Shut down (power failure)
+    3) deadlock condition (A deadlock is a situation in multithreaded programming where two or more threads are blocked
+       forever,each waiting for the other to release a lock)
+    4) JVM runs out of memory (int [] a = new int[Integer.MAX_NUMBER];)
+    5) Infinite loop: while(true){};
+
+- method overriding rule with exception
