@@ -1,0 +1,69 @@
+-----------------------------[List Interface]------------------------------------------------------
+
+- it is a child interface of collection interface
+- it inhabits a list type data structure where we store collections of object in ordered
+- it is index based (follow insertion order)
+- it can contains duplicate items (including multiple null values)
+
+- along with collection interface methods, list interface defines some other methods as well
+  which is available to list implemented class only
+    1) public void add(int index, Object obj) -> add the specified element at the specified index
+    2) public Object set(int index, Object obj) ->  replaces the element at the specified index with the specified element
+    3) public Object get(int index) -> returns the element at the specified position in this list
+    4) public Object remove(int index) -> remove and return an element available at the specified index
+    5) public int indexOf(Object obj) -> return an index of first occurrence of the specified element
+
+Implementation classes of List(I):
+-----------------------------[ArrayList class]-------------------------------------------------------
+1) ArrayList (C): [ArrayList <String> al = new ArrayList<>();]
+    - use dynamic array to store the elements (dynamically increase/decrease size)
+    - best choice if frequent operation is retrieval
+    - by default initial capacity of ArrayList is 10, we can create with custom capacity as well like
+      ArrayList<String> al1 = new ArrayList<>(100); here initial capacity is 100;
+    - once AL reaches to the max capacity then internally a new AL object will be created in the
+      memory automatically, with the following formula:
+      -> newCapacity = (currentCapacity * 3/2) + 1;
+
+ListIterator(I):
+    - this is the child interface of Iterator interface
+    - (ListIterator<T> lt = arrayList.listIterator())
+    - used to traverse list in forward and backward direction
+    - with hasNext(), hasPrevious(), next(), previous() methods
+
+* difference between ListIterator(I) and Iterator(I):
+    - Iterator can be used to traverse set & list, but ListIterator is only used for List types of obj
+    - Iterator can traverse only in forward direction while ListIterator can traverse in both direction
+    - with iterator we can only remove elements, can't add, but can modify LI using add(), remove() methods
+
+
+-------------------------[LinkedList class]-----------------------------------------------------------
+2) LinkedList (C): [LinkedList<String> list = new LinkedList<>();]
+    - another implementation of List(I) also implements Deque(I) since java 1.5
+    - internally uses *doubly linked list data structure (add/remove from both end)
+    - LL class is same as array list (i.e, it also maintain insertion order & allow duplicates)
+    - there is no capacity concept
+    - best choice if frequent operation is random insertion/deletion (no shifting required)
+
+
+-------------------------[Vector class]-----------------------------------------------------------
+3) Vector (C): [Vector<String> v = new Vector<>();]
+    - also a implementation of List interface
+    - it is same as ArrayList with only difference is:
+    * methods of ArrayList are not synchronized while mostly vector class method are synchronized
+
+
+-------------------------[Stack class]-------------------------------------------------------------
+3.1) Stack (C): [Stack<String> stack = new Stack<>();]
+    - it extends the vector class
+    - it implements data structure in *last in first out (LIFO) order
+    - it contains all the methods of vector class
+    - also provides its own methods, which defines their properties
+        1) boolean push(T t);
+        2) boolean pop();
+        3) Object peak();
+        boolean empty(), search(T t) -> returns 1 based position, -1 if not found
+
+-----------------------------------------------------------------------------------------------------
+Note: to the variable of List, we can store any of the implementation object
+    - List<T> list = ArrayList, LinkedList, Vector, Stack
+    - this way we can achieve Runtime Polymorphism

@@ -1,0 +1,29 @@
+Iterable Interface:
+    - this is the root interface of entire collection
+    - inherently all the interfaces & classes implements Iterable interface
+    - main functionality: it provides facility of iterating elements in forward direction only
+    - this contains only one abstract method `public Iterator<T> iterator()`
+
+- public Iterator<T> iterator(): this return the iterator object
+- once we get the iterator obj then we can iterate over each element one by one in a standard manner
+
+Iterator Interface:
+- this is the interface that actually defines methods to iterate over iterator objects
+- it contains 3 important methods:
+    1) boolean hasNext(): return true if iterator has some el else false
+    2) Object next(): return el and move cursor to the next el
+    3) void remove(): remove el from iterator
+
+Collection Interface:
+- a interface implemented by all the classes in CF
+- contains common methods that every collection will have
+    - int size()
+    - boolean isEmpty()
+    - boolean contains(Object element)
+    - boolean add(E element)
+    - boolean remove(Object element)
+    - Iterator<E> iterator()
+
+* Note: all the collection classes internally overrides the toString() method,
+  so when we print the object of the collection classes, it will print the elements inside the []
+  square bracket, instead of printing the address.

@@ -17,7 +17,6 @@ public class WrapperClass {
 
     - there are many other uses of wrapper classes (autoboxing, unboxing, null handling, generics, collections, parsing string, etc)
 */
-
     public static void main(String[] args) {
         System.out.println(Integer.MAX_VALUE);
     }
