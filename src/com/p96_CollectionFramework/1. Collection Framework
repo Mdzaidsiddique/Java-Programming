@@ -1,0 +1,53 @@
+collection:
+- a group of individual objects which are represented as single unit, known as collection of object
+
+java collection fw:
+- JCF is the set of predefined classes & interfaces from java.util package that helps you store,
+  manage & manipulate collection of objects
+- collections are like container where we can store & manipulate group of objects in a standard way
+* with the help of array we can also do the same but arrays are static (size)
+
+Difference b/w Arrays & Collections:
+    - Arrays are having fixed size (add element up to specified size only) -> ArrayOutOfBoundException
+    - Collections are dynamic in nature
+    - Arrays allows homogeneous elements only -> IncompatibleTypes
+    - Collections allow heterogeneous elements -> No Error
+    - in case of collections pre defined methods are there for searching, sorting, but not in arrays
+
+Collection Framework -> it contains 2 section:
+    1) collection (multiple objects are handled individually)
+    2) map (multiple objects handled in key-value pairs)
+
+
+    java.lang.Iterable(I)
+             |
+        Collection(I)
+    _________|__________
+   |         |          |
+ List(I)   Set(I)    Queue(I)
+
+List(I)
+    -> ArrayList(C),
+    -> LinkedList(C), also implements Deque(I) from java 1.5 onwards
+    -> Vector(C) -> Stack(C)
+
+Set(I)
+    -> HashSet(C) -> LinkedHashSet(C)
+    -> SortedSet(I) -> TreeSet(C)
+
+Queue(I)
+    -> PriorityQueue(C)
+    -> Deque(I) -> ArrayDeque(C), LinkedList(C) [since java 1.5]
+
+--------------------------------------------------------------------------------------------------
+Primitives in collections:
+    - collections doesn't allow primitives, it only deals with objects
+    - we need to store in corresponding wrapper class in order to use primitives
+    - internally collections use auto-boxing & auto-unboxing to store primitives
+    - for example:
+        ArrayList<Integer> arrayList = new ArrayList<>();
+        arrayList.add(10);
+
+auto-boxing & auto-unboxing:
+    - the automatic conversion of primitives data types to its equivalent Wrapper class is non as
+      boxing & it's opposite is unboxing
