@@ -1,0 +1,7 @@
+equals() and hashCode methods in java:
+
+    - both methods are defined in object class, that means these two methods are implicitly defined
+      in every java class including custom classes
+    - we can override these two methods inside our java class to make two objects logically equal
+
+
