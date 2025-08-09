@@ -62,3 +62,8 @@ ListIterator(I):
         2) boolean pop();
         3) Object peak();
         boolean empty(), search(T t) -> returns 1 based position, -1 if not found
+
+-----------------------------------------------------------------------------------------------------
+Note: to the variable of List, we can store any of the implementation object
+    - List<T> list = ArrayList, LinkedList, Vector, Stack
+    - this way we can achieve Runtime Polymorphism
