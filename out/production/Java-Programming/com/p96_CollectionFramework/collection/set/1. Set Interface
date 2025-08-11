@@ -21,4 +21,5 @@ syntax: HashSet<String> hs = new HashSet<>();
 LinkedHashSet class:
     - this class is the child class of HashSet class, but it preserve the insertion order
 
+Note: HashSet & LinkedHashSet class internally uses equals and hashCode methods to identify the duplicate objects
 
