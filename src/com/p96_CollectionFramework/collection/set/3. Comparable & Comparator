@@ -1,0 +1,47 @@
+In java TreeSet stores unique elements & in order (natural by default), for that we have:
+
+Comparable Interface:
+    - belongs to java.lang package, which is having only one method
+      public int compareTo(Object obj);
+      : this method compare current obj with specified obj and return:
+      : +ve int, if current object > specified object, -ve int if less than & zero if both equals
+
+    - Comparable → tells TreeSet how objects should be ordered.
+    - compareTo() → defines the actual comparison logic.
+
+- when you insert objects in tree set it uses compareTo() to determine order and uniqueness
+- all the wrapper class & string class internally implements the comparable interface
+-------------------------------------------------------------------------------------------------
+
+Comparator Interface:
+    - belongs to java.util package
+    - functional interface used to define custom ordering of objects
+    - if we want o define sorting logic of object outside the class then we can use comparator interface
+    - this interface has only an abstract method:
+        public int compare(Object o1, Object o2){
+            return -ve if o1 < o2
+            return +ve if o1 > o2
+            return zero if o1 == o2
+        }
+    - see the studentRollComparator class
+    - In this case Student object need not implement the Comparable interface any more
+
+------------------------------------------------------------------------------------------------
+Difference between Comparable & Comparator interface:
+Comparable: [public int compareTo(Object obj)]
+    - java.lang package
+    - If we want to specify the sorting logic of a class object within the same class , we need to use Comparable
+    - With the help of Comparable we can define only one sorting logic within a class.
+
+Comparator: [public int compare(Object obj1, Object obj2)]
+    - java.util package
+    - If we want to specify the sorting logic of a class object outside that class then we should use Comparator.
+    - With the help of Comparator we can define multiple sorting logic of a class object  inside multiple classes.
+
+-------------------------------------------------------------------------------------------------
+- In Java, TreeSet is backed by a TreeMap
+- Internally, TreeMap uses a Red-Black Tree (which is a type of self-balancing binary search tree)
+- So indirectly, TreeSet uses a Red-Black Tree to store elements
+
+
+
