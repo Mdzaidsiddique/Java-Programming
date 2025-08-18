@@ -1,0 +1,23 @@
+Queue(I): first in first out (FIFO)
+ |
+PriorityQueue(C):
+- It is a queue data structure where elements are ordered according to their priority, not just insertion order (like in a normal queue)
+- Internally, it is implemented using a Binary Heap (a complete binary tree)
+- By default, it is a min-heap → smallest element has the highest priority and comes out first
+
+key features:
+- ordering: (default natural (comparable), can customize using comparator)
+- no null allowed
+- duplicates allowed
+- Not thread-safe (If multiple threads need access, use PriorityBlockingQueue)
+
+Common Methods:
+    - add(E e) / offer(E e) → insert element
+    - peek() → get head element (highest priority) without removing
+    - poll() → get and remove head element
+    - remove(Object o) → remove specific element
+    - size() → number of elements
+
+
+
+
