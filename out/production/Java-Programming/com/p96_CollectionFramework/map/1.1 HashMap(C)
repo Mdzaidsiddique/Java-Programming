@@ -1,0 +1,10 @@
+HashMap Class:
+
+- HashMap(C) implements Map(I), allow us to store key-value pairs
+- Key should be unique (if try to insert duplicate then it will replace corresponding key)
+- Elements inserted based on the hashCode (doesn't follow sequence)
+- only one null key & multiple null values are allowed
+
+LinkedHashMap(C):
+- this is a child class of HashMap
+- preserve the sequence of all entries

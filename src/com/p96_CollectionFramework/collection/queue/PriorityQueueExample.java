@@ -33,6 +33,8 @@ public class PriorityQueueExample {
         pq2.add(50);
         pq2.add(30);
         pq2.add(20);
+        // add: Throws IllegalStateException if capacity full
+        // offer: instead of throwing exception it returns false
 
         System.out.println(pq2);
 

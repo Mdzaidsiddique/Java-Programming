@@ -1,0 +1,53 @@
+map:
+- belongs to java.util package, but *not the child interface of collection interface
+- group multiple objects in the form of key-values pairs, known as entry
+- in map, both key-values are objects
+- useful: search, update, delete elements on the basis of key
+
+Map(I):
+    - HashMap(C) -extends- LinkedHashMap(C)
+    - SortedMap(I) -implements- TreeMap(C)
+    - HashTable
+
+Important Methods:
+    V put(K key, V value):
+        - Inserts a key-value pair into the map
+        - If the key already exists, the old value is replaced
+    V get(Object key)
+       - Returns the value associated with the specified key, or `null` if the key does not exist
+    V remove(Object key)
+       - Removes the entry (key-value pair) for the specified key
+    boolean containsKey(Object key)
+       - Checks if the map contains a mapping for the given key
+    boolean containsValue(Object value)
+       - Checks if the map contains one or more keys mapped to the given value
+    int size()
+       - Returns the number of key-value mappings in the map
+    boolean isEmpty()
+       - Checks if the map is empty (no key-value pairs)
+    void clear()
+       - Removes all key-value pairs from the map
+    Set<K> keySet()
+       - Returns a `Set` view of all keys in the map
+    Collection<V> values()
+       - Returns a `Collection` view of all values in the map
+    Set<Map.Entry<K, V>> entrySet()
+        - Returns a `Set` view of all key-value mappings (each entry is a `Map.Entry` object)
+    V putIfAbsent(K key, V value): (Java 8+)
+        - Inserts the key-value pair only if the key is not already mapped
+    V replace(K key, V value)
+        - Replaces the value of the given key only if it is already present
+    boolean replace(K key, V oldValue, V newValue)
+        - Replaces the value for the given key only if it is mapped to the specified old value
+    void forEach(BiConsumer<? super K, ? super V> action): (Java 8+)
+        - Iterates through each key-value pair and performs the given action.
+    V getOrDefault(Object key, V defaultValue): (Java 8+)
+        - Returns the value for the key, or the default value if key not found.
+    compute(K key, BiFunction<? super K, ? super V, ? extends V> remappingFunction)
+        - Computes a new value for the given key.
+    computeIfAbsent(K key, Function<? super K, ? extends V> mappingFunction)
+        - Computes value if key is not already mapped.
+    computeIfPresent(K key, BiFunction<? super K, ? super V, ? extends V> remappingFunction)
+        - Computes value if key is already mapped.
+    merge(K key, V value, BiFunction<? super V, ? super V, ? extends V> remappingFunction)
+        - Merges the new value with the existing one for the given key

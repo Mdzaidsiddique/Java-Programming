@@ -1,0 +1,47 @@
+Serialization: java objects --> byte stream
+Deserialization: byte stream --> Java Object
+transient:
+
+- serialization is an conversion of the state of an object into byte stream
+- which may save to db, transfer over network etc
+
+- The serialization and deserialization process is platform-independent,
+  it means you can serialize an object on one platform and deserialize it on a different platform
+
+Serializable Interface: (Marker Interface: no data member, no method)
+    - java class directly can't serialize but the class implements Serializable(I) (java.io.Serializable)
+    - that class only eligible for serialization
+    - else will get NotSerializableException
+    - all the wrapper/string/collection_fw related classes internally implements Serializable(I)
+
+- the java.io.ObjectOutputStream class helps us to serialize an object of java class
+- the java.io.ObjectInputStream class helps to read stream of bytes & deserialize
+
+ObjectOutputStream(C):
+    - method writeObject(Serializable s)
+    - it takes an object of class (serialization implemented) & converts into sequence (bytes of stream)
+
+Note: multiple objects can serialized & can deserialized in the same order as serialized only
+
+------------------
+transient keyword:
+    - applicable only for variables
+    - at the time of serialization if we don't want to save original value due to some security
+      reason (like password, etc) then make that variable transient
+
+For Example: if a program accepts a user's login details and password, but we don't want to store
+    the original password in the file. Here, we can use transient keyword and when JVM reads
+    the transient keyword it ignores the original value of the object and instead stores the
+    default value of the object
+
+transient vs static:
+    -
+
+Serialization w.r.t inheritance:
+    -
+
+
+
+
+
+

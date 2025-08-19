@@ -18,6 +18,10 @@ Common Methods:
     - remove(Object o) → remove specific element
     - size() → number of elements
 
+Note: the internal ordering is priority-based, not insertion order
+    - Example: If you insert [30, 10, 20], the queue may internally store them as [10, 30, 20]
+      depending on heap arrangement, but the head will always be the smallest (10)
+
 
 
 
