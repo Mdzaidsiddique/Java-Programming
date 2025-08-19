@@ -1,0 +1,7 @@
+TreeMap(C) --implements-- SortedMap(I), Map(I)
+
+- the keys of TreeMap should be Comparable (natural order), else we need to use Comparator
+- and specify the comparator implemented (custom order) class inside the TreeMap constructor
+- if comparable not used then comparator must be used else ClassCastException
+
+*- the TreeMap in java doesn't allow Null keys (like TreeSet) -> NullPointerException

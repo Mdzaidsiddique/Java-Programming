@@ -1,0 +1,15 @@
+Map.Entry Interface:
+- Entry is the inner interface defined inside the map interface
+- accessed by Map.Entry name
+- it returns a collection view of the map
+- each key-value pair is called as one entry, hence map is considered as group of entries
+- without existing map object there is no chance of existing entry object (because Entry(I) defined inside Map(I))
+
+Methods of Map.Entry interface:
+  - public K getKey(); It is used to obtain a key.
+  - public V getValue(); It is used to obtain a value.
+  - public V setValue(V value); It is used to replace the value corresponding to this entry with the specified value
+
+Note: Since Entry is an inner interface defined inside the Map interface, we define the variable of
+      this Entry interface with the help of its outer interface Map
+    - Example: Map.Entry me;

@@ -1,0 +1,11 @@
+HashMap & HashTable:
+    - both are used to stored data in key-values from
+    - both are using hashing technique to store unique keys
+
+Differences:
+HashMap - HashMap is non Synchronized, not thread-safe
+        - can't be shared bw many thread without proper synchronized code
+        - allow only one null key and multiple null values
+
+HashTable - synchronized, thread-safe & can be shared with multiple threads
+          - HashTable doesn't allow any null keys or values
