@@ -35,13 +35,39 @@ For Example: if a program accepts a user's login details and password, but we do
     default value of the object
 
 transient vs static:
-    -
+    - static variables are not part of object, hence they will also not participate in serialization
+
+Serialization w.r.t Has-A relationship: (object graph)
+    - whenever we are serializing an object, the set of all the objects which are reachable from that object will be serialized automatically.
+      this group of object is nothing but object-graph
+      in object-graph every object should be serializable otherwise we will get a Runtime exception NotSerializableException.
+
 
 Serialization w.r.t inheritance:
-    -
+    - If the parent class is implementing Serializable interface then automatically every child class
+      implements Serializable(I) weather we mention it or not in a child class
+    - It is a serializable nature of inheriting parent to child
+    - if the parent class not implements serializable (I) still we can serialize child class if child class
+      implements serializable interface
+
+- At the time of serialization JVM will ignores the updated values of instance variables which are inherited from the parent
+- At the time of Deserialization JVM will check if the parent class is serializable or not
+  if the parent class is non-serializable, then the JVM will create an object for the non-serializable parent
+  class by executing the default constructor of the parent class and sharing its default instance variable value to the child objects
+
+
+--------------------------
+Important Points:
+    - The class must implement Serializable interface.
+    - ObjectOutputStream → used for serialization (write object).
+    - ObjectInputStream → used for deserialization (read object).
+    - transient keyword → used if you don’t want to save a particular variable of the object.
 
 
 
+flush() & close():
+- when we write data to a file using stream, java doesn't always write it immediately instead,
+  it keeps some data in a buffer (a temporary memory area) to improve performance
 
-
-
+- flush(): tells Java `Send everything from the buffer to the file right now`
+- close(): internally calls flush(), then close the stream

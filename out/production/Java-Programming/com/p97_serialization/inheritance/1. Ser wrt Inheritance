@@ -1,0 +1,13 @@
+- if the parent class is implementing Serializable interface then automatically every child class
+  implements Serializable, weather we mention it or not in a child class
+- It is a Serializable nature of inheriting parent to child.
+
+
+- if parent class doesn't implements the Serializable interface still we can serialize the child objects
+  if the child class implements Serializable interface
+
+- at the time of serialization JVM will ignores the updated values of instance variables which are inherited from the parent
+
+- at the time of Deserialization JVM will check if the parent class is serializable or not
+  if the parent class is non-serialisable, then the JVM will create an object for the non-serializable parent class
+  by executing the default constructor of the parent class and sharing its default instance variable value to the child objects
