@@ -1,0 +1,4 @@
+lambda expression:
+- anonymous or unnamed method
+- lambda expression doesn't execute on its own
+- instead it is to implement a method defined by functional interface

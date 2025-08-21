@@ -1,32 +1,24 @@
-- Arrays are type safe & collections are not type safe
-- Arrays are fixed in size
+* type safety: Prevents assigning wrong types (with generics = type-safe)
+* type casting: Explicitly converting one type into another (when the compiler is unsure of the actual type at runtime)
 
-Type Casting:
-- in case of array, at the tim eof retrieval type casting is not required coz arrays hold similar types of obj
-- but in case of collections type casting is required coz it may holds distinct types of objects
+* generics = write once, use for any type (with type safety).
+  or: mechanism in java, allow to create class, interface, methods that operates over verity of types
+      ensuring type safety
 
-Unbounded type:
-- there are no restrictions, hence it is unbounded type
-- class Type<T>{}, Test<Integer> t1 = new Test<Integer>();
+* Unbounded type <?> : Don’t care about the type, any type is allowed
+                     - Useful when you don’t care about the actual type
 
-Bounded types (extends kw):
-- we can bound the parameter using extends kw, such types called bounded types
-- we can't use `implements` & `super` but can replace `implements` kw purpose with `extends` kw
-    : class Test<T extends Number> (valid)
-    : class Test<T extends Runtime> (valid)
-    : class Test<T implements Runtime> (invalid)
-    : class Test<T super Runtime> (invalid)
+* Bounded type: restrict the type parameter to a certain type or its subclasses/superclasses
+      a) Upper bound (<? extends T>) → Accepts T and its children (good for reading)
+      b) Lower bound (<? super T>) → Accepts T and its parents (good for writing)
 
-class <T extends X>:
-    - X can either class or interface
-    - if X is class, then type parameter can either be X types or its child classes
-    - if X is interface, then type parameter can either be X types or its implementation class
+* Covariant: <? extends T> (read only) can contain T type or subType of T
+           - Arrays are said to be covariant, i.e, array of type T may contains type T or subtype of T
 
-- Based on our requirements we can declare any number of Type Parameters
-- and all these TypeParameter should be separated with commas
-- Example Class HashMap<K,V>() | Class Test<X,Y,Z>()
+* Contra-Variant: <? super T> (write only) can contain T or its super type
 
-
-
-
-
+* type-erasure: generic type get erased after compilation
+                (not available to JVM at runtime-> get converted into objects)
+       or: - when we use Generics in Java, the compiler checks types at compile time (for type safety),
+             but at runtime, the type information (<T>, <String>, <Integer>, etc.) is erased (removed).
+           - This process is called Type Erasure.

@@ -2,3 +2,13 @@ lambda expression:
 - anonymous or unnamed method
 - lambda expression doesn't execute on its own
 - instead it is to implement a method defined by functional interface
+
+Miscellaneous Points about lambda expressions:
+    - In the argument list, mentioning data type is optional
+    - In the case of a single parameter () is optional but for zero or more than one parameter it is compulsory
+    - For a single statement body, curly brackets are optional
+    - Use of the return keyword is optional if the body of the lambda function is of one statement only
+    - Lambda expressions are treated as a methods so .class file is not generated for them
+        - a lambda expression looks like a method, but technically it’s not a method in Java
+        - it is an instance of a functional interface
+        - when you write a lambda, the compiler does not create a new .class file for it (unlike anonymous inner classes which do).
