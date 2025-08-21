@@ -1,0 +1,47 @@
+Object Class:
+- belongs to java.lang package
+- every class in java directly or indirectly derived from the object class
+- if a class doesn't extent any class then it is a in-direct child of Object class
+- therefore the object class methods are available to all the java classes
+
+- beneficial, if you want to refer any object whose type you don't know (upcasting)
+    - Object obj=getObject(); //we don't know what object will be returned from this method
+
+------------------------------------------
+Methods of Object Class:
+1. public final Class getClass():
+    - returns the Class class object of this object.
+    - The Class class can further be used to get the metadata of this class
+
+2. public int hashCode():
+    - returns the hashcode number for this object
+
+3. public boolean equals(Object obj)
+    - compares the given object to this object
+
+4. protected Object clone() throws CloneNotSupportedException:
+    - creates and returns the exact copy (clone) of this object
+
+5. public String toString():
+    - returns the string representation of this object
+
+Multithreading:
+1. public final void notify():
+    - wakes up single thread, waiting on this object's monitor
+
+2. public final void notifyAll():
+    - wakes up all the threads, waiting on this object's monitor
+
+3. public final void wait(long timeout) throws InterruptedException:
+    - causes the current thread to wait for the specified milliseconds,
+    - until another thread notifies (invokes notify() or notifyAll() method)
+
+4. public final void wait(long timeout,int nanos) throws InterruptedException:
+    - causes the current thread to wait for the specified milliseconds and nanoseconds,
+    - until another thread notifies (invokes notify() or notifyAll() method)
+
+5. public final void wait() throws InterruptedException:
+    - causes the current thread to wait, until another thread notifies (invokes notify() or notifyAll() method)
+
+6. protected void finalize() throws Throwable:
+    - is invoked by the garbage collector before object is being garbage collected

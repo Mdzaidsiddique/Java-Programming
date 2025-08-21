@@ -20,5 +20,7 @@ Abstract Method:
     - achieve by abstract modifier
     - sub class must override and provide definition to abstract methods
     - if method is abstract, thee class must be abstract
+    - The abstract keyword is NOT necessary in interface because all methods in interfaces were implicitly public abstract
+    - but in abstract class it is mandatory
 
 - abstract can not be final, static & private

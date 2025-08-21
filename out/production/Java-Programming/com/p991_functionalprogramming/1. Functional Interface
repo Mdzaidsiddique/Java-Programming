@@ -1,0 +1,72 @@
+functional programming (declarative):
+- what to solve : focus on results not process, [in contrast to an imperative: how to solve]
+- de-compose the problems into functions
+
+in FP, functions are treated as 1st-class citizens
+
+Functional Interface:
+    - usually annotated with @FunctionalInterface from java.lang package (not mandatory, but recommended)
+    - an interface which has only one abstract method (also known as SAM(I): single abstract method interface)
+    - it may have multiple default, static methods but can have only one abstract method
+    - it can have methods of object class also
+    - FI used heavily in lambdas & StreamAPI
+
+Pre-defined Functional Interface:
+    - java.lang.Comparable -> public int compareTo(Object obj)
+    - java.util.Comparator -> public int compare(Object obj1, Object obj2)
+
+Ways to Implement Functional Interface:
+1) Separate class
+2) Anonymous inner class
+3) Lambda expression
+4) Method reference
+5) Constructor reference
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+functional interface
+annonymous inner class
+lambda expression
+method reference
+
+
+
+wed
+thur
+fri
+sat
+sun
+----
+DB (subQueries, Normalization, advFunctions)
++
+AdvJava (streamAPI, FunctionalP, CovContraV)
+
+JDBC:
+Hibernate:
+Spring:
+Springboot:
+Authntication (
