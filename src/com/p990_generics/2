@@ -1,0 +1,39 @@
+
+- best to refer notion notes
+
+Generic methods & wild card character `?`:
+- we can use super kw at method level but at the class level only extends kw are allowed
+- within the method we can add only the string types of object, else CE error
+
+1) m1 ArrayList<String> L
+    - we can call this method by passing ArrayList of string only
+
+2) m1 ArrayList<?> L:
+    - we can call this method by passing ArrayList of any type
+    - ArrayList<String> l1 = new ArrayList<String>();
+    - ArrayList<Integer> l1 = new ArrayList<Integer>();
+    - ArrayList<Student> l1 = new ArrayList<Student>();
+
+advantage: This type of method are best suitable for read-only operation
+disadvantage: within the method, we can’t add anything to the list except null because we don't know
+              the type exactly, null is allowed because it is a valid value for any type
+              - m1(ArrayList<?>) l
+              - l.add(10.5) L: invalid
+              - l.add(10) L: invalid
+              - l.add(”ABC”) L: invalid
+              - l.add(null) L: valid
+
+3) m1 ArrayList<? extends X> L:
+    - X can either be class or interface
+    - if x is a class then we can call this method by either passing ArrayList of either X type or its child classes
+    - if x is an interface then we can call this method by either AL of x types or its implementation classes
+    - But within the method, we can't add anything to the list except null because we don't know the type of X exactly
+    - This type of method is also best suited for read-only operation
+
+4) m1 ArrayList<? super X> L:
+    - X can be either class or interface
+    - if X is a class then we can call this method by passing ArrayList of either X type or its superclasses
+    - if X is an interface then we can call this method by passing ArrayList of either X type or superclass of implementation classes of X
+      - Object(C)<—-Runnable(I)←Thread(C)
+      - but within the method, we can add X types of objects and null to the list
+
