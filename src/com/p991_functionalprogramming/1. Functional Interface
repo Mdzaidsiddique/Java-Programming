@@ -22,6 +22,19 @@ Ways to Implement Functional Interface:
 4) Method reference
 5) Constructor reference
 
+-----------------------------
+Inbuilt Functional Interface:
+
+1) java.util.function.Predicate<T>;
+   - contains only one abstract method
+   - public boolean test(T t);
+   - this test() checks whether supplied object satisfied the condition or not
+
+2) java.util.function.Consumer<T>;
+    -
+
+3) java.util.function.Supplier<T>;
+4) java.util.function.Function<T,R>;
 
 
 
