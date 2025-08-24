@@ -1,4 +1,4 @@
-package com.p991_functionalprogramming.inbuiltFI;
+package com.p991_functionalprogramming.inbuilt_functional_interface;
 
 import com.p991_functionalprogramming.Student;
 

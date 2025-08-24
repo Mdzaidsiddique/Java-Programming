@@ -1,0 +1,22 @@
+Method Reference:
+    - simplified (short-cut) to lambda expressions (java 8)
+    - compact & easy form of lambda expressions
+
+Types of method reference:
+1. Reference to a static method
+   - class/interfaceName::methodName
+   - ParseNumbersClass p = number -> Integer.parseInt(number); is same as Integer::parseInt;
+
+2. Reference to an instance (non-static) method for a particular object
+- particular-obj (Student s = new Student();) -> particular type
+   - object-name::methodName
+   - student::showDetails, etc
+
+3. Reference to an instance (non-static) method for a arbitrary object
+- arbitrary-obj: (List<Students> ls = new ArrayList<>();) -> any type within specified type
+    - object-name::methodName
+    - Arrays::equals, Integer::parseInt, etc
+
+4. Reference to a constructor
+   - ClassName::new
+

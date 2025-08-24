@@ -1,0 +1,26 @@
+Stream API: (java.util.stream -> contains methods, classes, interfaces) -> java 8
+- used to process collections of objects
+- a stream is a sequence of objects that supports various methods that can be pipelined to produce
+  desired result
+
+Stream API has only one interface:
+- java.util.stream.Stream
+Note: obj of this Stream(I) represents sequence of obj from a source like collections
+
+- the Stream interface has two types of methods:
+  1) terminal methods
+  2) intermediate methods
+
+
+Miscellaneous point about stream:
+    1. only objects, no primitives
+    2. doesn't store elements, only represents in sequence (wire doesn't store electricity)
+    3. operations (filtering) performed on stream doesn't modify original source
+    4. streams are lazy, evaluates code only when required
+    5. elements of a stream, only visited once during the life of a stream, a new stream must be
+       generated to revisit the same elements of the source
+
+
+
+
+
