@@ -1,0 +1,41 @@
+Connection(I), Statement(I), PreparedStatement
+
+Connection(I):
+- connection is the session between java app and database
+
+- Connection(I) is a factory of (Statement, PreparedStatement & DatabaseMetaData)
+- i.e, object of Connection can be used to get the object of (Statement, PreparedStatement & DatabaseMetaData)
+
+- the Connection (I) provides many methods like transection management like:
+    - commit(), rollback(), setAutoCommit(), setTransectionalIsolation(), etc
+    - also methods like createStatement(), close(), etc
+
+Statement(I):
+- use to create basic sql statement (accept sql string)
+- provides methods to execute queries with database
+- suitable for DDL queries like (create, alter & drop)
+
+Statement(I) - extends - PreparedStatement(I) - extends - CallableStatement(I)
+
+- different types of statement that JDBC follows:
+    1. Create Statement (can create obj of this from connection interface)
+        - int executeUpdate(DRL)
+        - boolean execute(any SQL)
+        - ResultSet executeQuery(DRL)
+    2. Prepared Statement (connection.preparedStatement(SQL));
+        - sub-interface of statement
+        - used to execute parameterized queries
+        - ps = conn.prepareStatement("insert into student values(?,?,?,?)");
+          ps.setInt(1,45)
+          ps.setString(2, "zaid")
+        - after binding the appropriate placeholder, we need to call ps.executeUpdate(), ps.executeQuery(), etc
+
+    3. Callable Statement
+
+
+
+closing connection:
+1) finally block - connection.close()
+2) try with resources (from java 1.7 onwards) - best & modern way
+   - syntax: try(connection){}catch(Exception e){}
+   - no explicit close() required

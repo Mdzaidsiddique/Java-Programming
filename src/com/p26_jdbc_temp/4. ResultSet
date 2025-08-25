@@ -1,0 +1,16 @@
+Result Set:
+- ResultSet is an interface in java.sql package
+- it represents the tabular result of executing a SQL query (usually a SELECT statement)
+- each row in the result corresponds to one record from the database
+- you can iterate over the rows and retrieve column values
+
+Cursor in ResultSet:
+- RS has a cursor that points to rows
+- At first, the cursor is positioned before the first row, we must call next() to move it to the first row
+
+- rs.next() - true (if row is present) and false (if no rows are there)
+- rs.getInt() - get int value from a columns
+- rs.getString()- get String value from column
+- close(), etc
+
+ResultSet is a table-like cursor that lets you read (and sometimes update) data returned from a SQL query in JDBC.

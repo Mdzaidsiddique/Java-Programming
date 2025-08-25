@@ -1,0 +1,31 @@
+🔹Class.forName() in Java
+    - a static method: java.lang.Class class (which is part of the core Java library in the java.base module)
+    - public static Class<?> forName(String className) throws ClassNotFoundException
+    - Used to load/register DB driver (before Java 6 it was mandatory, now optional)
+
+- Class is a special class in Java that represents metadata about classes and interfaces at runtime
+- forName(String className) loads a class dynamically when you give its **fully qualified name (FQN)
+
+🔹Why do we use it in JDBC?
+-in JDBC, we often see: Class.forName("com.mysql.cj.jdbc.Driver");
+- Here, we’re dynamically loading the MySQL JDBC driver class at runtime
+- When the class is loaded, its static initializer block runs, which automatically registers the driver with DriverManager
+
+- Inside the driver class (com.mysql.cj.jdbc.Driver), there’s a static block like:
+    static {
+        try {
+            java.sql.DriverManager.registerDriver(new Driver());
+        } catch (SQLException e) {
+            throw new RuntimeException("Failed to register driver", e);
+        }
+    }
+
+So when we call Class.forName(...), it triggers this static block, and the driver becomes available to DriverManager
+
+🔹without `Class.forName()`
+   - in JDBC 4.0 (Java 6+) and later, you don’t always need `Class.forName()`.
+   - Because of Service Provider mechanism (SPI) in `META-INF/services/java.sql.Driver`, the driver is loaded automatically
+     if the JAR is in the classpath.
+
+Example: Connection con = DriverManager.getConnection(url, "root", "root");
+         will work without `Class.forName()` in modern Java, as long as the driver JAR is present

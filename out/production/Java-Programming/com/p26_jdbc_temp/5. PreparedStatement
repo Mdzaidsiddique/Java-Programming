@@ -1,0 +1,12 @@
+
+statement has some limitations:
+    - degrade performance
+
+
+PreparedStatement: sub-interface of statement(I)
+    - PS ps = connection.preparedStatement(String sql);
+    - parameterized query:
+        - insert into student(roll, name, address, mobile_no) values (?,?,?,?);
+        - ps.setInt(), ps.setString(), etc
+
+

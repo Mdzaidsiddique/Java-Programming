@@ -1,0 +1,7 @@
+static in java:
+    - block, variable, method, class
+
+miscellaneous points about static:
+    - as soon as app is loaded to memory, static block execute even before the main method
+    - multiple static block executes in the order the defined
+    - a non-static block executes when object is created (everytime), before the constructor
