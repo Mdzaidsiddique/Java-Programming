@@ -1,0 +1,47 @@
+JDBC: Java Database Connectivity (to connect java application with RDBMS db)
+- an API to connect & execute queries (CRUD) with db
+- JDBC API used JDBC Driver to connect with db
+
+Java - JDBC API - JDBC Driver - Database
+
+JDBC Driver: main component to establish the connection between Java application and database
+
+there are 4 types of jdbc driver:
+    1. JDBC-ODBC Bridge - slow
+    2. Native API Driver - medium
+    3. Network Protocol Driver - medium
+    4. Thin Driver (Pure Java) - fast
+
+in modern applications, Type-4 (Thin Driver) is used almost everywhere
+- that’s what you’re using when you write: Class.forName("com.mysql.cj.jdbc.Driver");
+- note: before that must have to configure mysql driver jar (refer - setup file above)
+
+Class.forName();
+    - static method form java.lang.Class class (part of java base module)
+    - Class is a special class in Java that represents metadata about classes and interfaces at runtime
+    - forName(String className) loads a class dynamically when you give its fully qualified name (FQN)
+
+when Class.forName() of jdbc executes, three thong happens in the background:
+    1) driver related main class loaded to the primary memory
+    2) driver related main class created
+    3) driver object registered with DriverManager class
+
+there are 5 steps to connect any java app with db using JDBC:
+1) register driver class (Class.forName("com.mysql.cj.jdbc.Driver");)
+
+2) create the connection object:
+   Connection conn = DriverManager.getConnection(url, username, password);
+   - url = "jdbc:mysql://localhost:3306/db-name"
+   - username = "root", pass = "root"
+
+3) create statement object: (once we get the connection obj then can execute any sql statement)
+   Statement statement = connection.createStatement() - throws SQLException
+
+4) execute the query:
+    - public int executeUpdate(String sql);
+    - public ResultSet executeQuery(String sql);
+    - etc
+
+5) close the connection: connection.close()
+   note: since java 7, JDBC has a ability (try with resource) to auto close resources of type
+         connection, statement & ResultSet (it void explicit closing step)
